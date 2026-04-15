@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mary Mie M. | Electrical Estimator | Sagan Candidate Presentation</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #101828;
+  --primary-light: #1D2939;
+  --accent: #444CE7;
+  --accent-dim: #3538CD;
+  --warm: #F9FAFB;
+  --warm-dark: #EAECF0;
+  --surface: #ffffff;
+  --surface-alt: #F9FAFB;
+  --border: #E4E7EC;
+  --text: #344054;
+  --text-muted: #667085;
+  --charcoal: #101828;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--warm);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+/* ── Header ── */
+.header {
+  background: var(--primary);
+  border-radius: 16px 16px 0 0;
+  padding: 36px 40px 28px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  background: var(--accent);
+  opacity: 0.06;
+  border-radius: 50%;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.sagan-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+}
+
+.sagan-logo svg { opacity: 0.9; }
+
+.header-badge {
+  background: rgba(68,76,231,0.2);
+  color: #a5b4fc;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.candidate-intro {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.candidate-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), #818cf8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  flex-shrink: 0;
+}
+
+.candidate-name {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+
+.candidate-title {
+  font-size: 15px;
+  color: rgba(255,255,255,0.7);
+  font-weight: 500;
+}
+
+.header-meta {
+  display: flex;
+  gap: 24px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+}
+
+.meta-item svg { opacity: 0.5; flex-shrink: 0; }
+.meta-value { color: white; font-weight: 600; }
+
+/* ── Main Card Body ── */
+.card-body {
+  background: var(--surface);
+  border-radius: 0 0 16px 16px;
+  border: 1px solid var(--border);
+  border-top: none;
+}
+
+.section {
+  padding: 28px 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section:last-child { border-bottom: none; }
+
+.section-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title svg { opacity: 0.4; }
+
+/* ── Recruiter Narrative ── */
+.narrative {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text);
+  position: relative;
+  padding-left: 20px;
+  border-left: 3px solid var(--accent);
+}
+
+/* ── Why Bullets ── */
+.why-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+.why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.why-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+/* ── Fit Indicators ── */
+.fit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+.fit-card {
+  background: var(--warm);
+  border: 1px solid var(--warm-dark);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.fit-card-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.fit-card-value {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* ── Strength Bars ── */
+.bars-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 32px;
+}
+
+.bar-item { display: flex; flex-direction: column; gap: 6px; }
+
+.bar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar-label { font-size: 13px; font-weight: 600; color: var(--text); }
+
+.bar-score {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.bar-track {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  transition: width 0.6s ease;
+}
+
+/* ── Experience Timeline ── */
+.exp-list { display: flex; flex-direction: column; gap: 0; }
+
+.exp-item {
+  display: flex;
+  gap: 16px;
+  padding: 12px 0;
+}
+
+.exp-item:not(:last-child) { border-bottom: 1px solid #f3f4f6; }
+
+.exp-dot-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4px;
+}
+
+.exp-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px var(--primary);
+  flex-shrink: 0;
+}
+
+.exp-role { font-size: 14px; font-weight: 700; color: var(--text); }
+.exp-company { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+.exp-desc { font-size: 13px; color: #6b7280; margin-top: 4px; line-height: 1.5; }
+
+/* ── Tools ── */
+.tools-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tool-tag {
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.tool-tag.highlight {
+  background: rgba(68,76,231,0.06);
+  border-color: rgba(68,76,231,0.3);
+  color: var(--accent);
+}
+
+/* ── Licenses ── */
+.certs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cert-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(68,76,231,0.06);
+  border: 1px solid rgba(68,76,231,0.25);
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.cert-badge svg { flex-shrink: 0; }
+
+/* ── Recruiter Note ── */
+.recruiter-note {
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  padding: 24px 28px;
+}
+
+.recruiter-note-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.recruiter-note-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: white;
+}
+
+.recruiter-note-name { font-size: 13px; font-weight: 700; }
+.recruiter-note-role { font-size: 11px; color: var(--text-muted); }
+
+.recruiter-note-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+/* ── Footer ── */
+.footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.footer a { color: var(--accent); text-decoration: none; }
+
+@media (max-width: 640px) {
+  .page-wrapper { padding: 16px 12px; }
+  .header, .section { padding-left: 20px; padding-right: 20px; }
+  .fit-grid { grid-template-columns: 1fr; }
+  .bars-grid { grid-template-columns: 1fr; }
+  .candidate-intro { flex-direction: column; text-align: center; }
+  .header-meta { justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+  <!-- ═══ HEADER ═══ -->
+  <div class="header">
+    <div class="header-top">
+      <div class="sagan-logo">
+        <img src="https://careertopia.com/wp-content/uploads/2024/03/CareertopiaAsset-1@2x.png" alt="Careertopia" style="height:26px; filter: brightness(0) invert(1); opacity: 0.85;">
+        <span style="opacity:0.3; margin: 0 4px;">|</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        Sagan
+      </div>
+      <div class="header-badge">White Glove Candidate</div>
+    </div>
+
+    <div class="candidate-intro">
+      <div class="candidate-avatar">MM</div>
+      <div>
+        <div class="candidate-name">Mary Mie M.</div>
+        <div class="candidate-title">Electrical Estimator</div>
+      </div>
+    </div>
+
+    <div class="header-meta">
+      <div class="meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span class="meta-value">Cebu City, Philippines</span>
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+        <span class="meta-value">6+ Years Engineering Experience</span>
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span class="meta-value">Available Immediately</span>
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <span class="meta-value">PRC Licensed Electrical Engineer</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ CARD BODY ═══ -->
+  <div class="card-body">
+
+    <!-- Recruiter Quick Take -->
+    <div class="section">
+      <div class="section-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        Recruiter's Take
+      </div>
+      <div class="narrative">
+        Mary is not a virtual assistant who learned to read blueprints. She's a licensed Electrical Engineer from the Philippines who already estimates 4 houses per day for a US residential client in Texas. Bluebeam, Excel, quantity takeoffs, BOMs, cost analysis. She's doing this right now, remotely, and hitting US construction standards. Before that she spent three years as a project engineer in local government, reviewing and approving electrical plans, running site inspections, managing procurement for municipal infrastructure. She also holds a Real Estate Broker and Real Estate Appraiser license. Triple licensed. The property management work between engineering roles gave her vendor management, budgeting, and compliance discipline that most estimators never develop. She's organized, she's fast, and she has the technical depth to back it up.
+      </div>
+    </div>
+
+    <!-- Why This Candidate -->
+    <div class="section">
+      <div class="section-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Why Mary Mie
+      </div>
+      <ul class="why-list">
+        <li class="why-item">
+          <div class="why-dot"></div>
+          <span><strong>4 houses per day, US residential.</strong> Currently estimating for InCharge Electrical Services in Texas. Takeoffs, BOMs, cost estimates. This is her daily output right now.</span>
+        </li>
+        <li class="why-item">
+          <div class="why-dot"></div>
+          <span><strong>PRC Licensed Electrical Engineer.</strong> Not a self-taught estimator. Government-licensed, code-certified, trained to review and approve electrical plans under official mandate.</span>
+        </li>
+        <li class="why-item">
+          <div class="why-dot"></div>
+          <span><strong>Already working remotely for a US client.</strong> No adjustment period. She knows US standards, US timelines, and US expectations. She's been delivering since December 2024.</span>
+        </li>
+        <li class="why-item">
+          <div class="why-dot"></div>
+          <span><strong>Triple licensed professional.</strong> Electrical Engineer, Real Estate Broker, Real Estate Appraiser. That's rare. Shows someone who doesn't stop learning.</span>
+        </li>
+        <li class="why-item">
+          <div class="why-dot"></div>
+          <span><strong>Property management adds operational muscle.</strong> Vendor coordination, budget tracking, contract negotiation, compliance monitoring. She managed properties for JLL and hit 94% collection efficiency in 11 months.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Client-Specific Fit Indicators -->
+    <div class="section">
+      <div class="section-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        Fit Indicators
+      </div>
+      <div class="fit-grid">
+        <div class="fit-card">
+          <div class="fit-card-label">US Residential Estimation</div>
+          <div class="fit-card-value">Active estimator for a Texas-based electrical contractor. 4 houses/day. Bluebeam markups, BOMs, cost calcs. Already producing at scale.</div>
+        </div>
+        <div class="fit-card">
+          <div class="fit-card-label">Licensed Engineer</div>
+          <div class="fit-card-value">PRC Licensed Electrical Engineer. Reviewed and approved electrical plans for a local government unit. Code-level knowledge, not just surface familiarity.</div>
+        </div>
+        <div class="fit-card">
+          <div class="fit-card-label">Documentation Discipline</div>
+          <div class="fit-card-value">Built a document archiving system for an engineering department. Maintains project files, trackers, and bid schedules. Everything organized, nothing lost.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Strength Bars -->
+    <div class="section">
+      <div class="section-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        Strength Profile
+      </div>
+      <div class="bars-grid">
+        <div class="bar-item">
+          <div class="bar-top"><span class="bar-label">Electrical Estimation</span><span class="bar-score">95</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:95%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-top"><span class="bar-label">Bluebeam / Plan Markups</span><span class="bar-score">93</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:93%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-top"><span class="bar-label">BOMs & Quantity Takeoffs</span><span class="bar-score">94</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:94%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-top"><span class="bar-label">US Construction Standards</span><span class="bar-score">88</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:88%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-top"><span class="bar-label">Project Documentation</span><span class="bar-score">92</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:92%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-top"><span class="bar-label">Vendor & Budget Management</span><span class="bar-score">86</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:86%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="section">
+      <div class="section-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+        Experience Highlights
+      </div>
+      <div class="exp-list">
+        <div class="exp-item">
+          <div class="exp-dot-col"><div class="exp-dot"></div></div>
+          <div>
+            <div class="exp-role">Virtual Assistant, Electrical Estimator (Remote)</div>
+            <div class="exp-company">GoTeam &middot; Client: InCharge Electrical Services, Texas &middot; Dec 2024 - Present</div>
+            <div class="exp-desc">Preparing detailed electrical estimates, quantity takeoffs, and BOMs for US residential projects. 4 houses per day. Bluebeam and Excel for plan markups, cost calculations, and documentation. Collaborating directly with US project managers and estimators.</div>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-dot-col"><div class="exp-dot"></div></div>
+          <div>
+            <div class="exp-role">Property Manager</div>
+            <div class="exp-company">Jones Lang Lasalle &middot; Azalea Place Cebu &middot; Feb 2024 - Dec 2024</div>
+            <div class="exp-desc">Achieved 94% collection efficiency over 11 months. Oversaw daily property operations, budget planning, vendor management, and facilities coordination. Full compliance with local government regulations.</div>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-dot-col"><div class="exp-dot"></div></div>
+          <div>
+            <div class="exp-role">Electrical Estimator, Project Engineer & Document Controller</div>
+            <div class="exp-company">Local Government Unit of Cordova &middot; Mar 2020 - Jun 2023</div>
+            <div class="exp-desc">Prepared electrical plans, procurement docs, and technical reports for municipal infrastructure. Reviewed and approved electrical plans under official mandates. Conducted site inspections for Philippine Electrical Code compliance. Built structured document archiving system for the engineering department.</div>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-dot-col"><div class="exp-dot"></div></div>
+          <div>
+            <div class="exp-role">Building Engineer</div>
+            <div class="exp-company">Ayala Property Management &middot; Amaia Steps Mandaue &middot; Jan 2019 - Mar 2020</div>
+            <div class="exp-desc">Managed turnover and project acceptance activities. Oversaw MEPF systems (Mechanical, Electrical, Plumbing, Fire Protection). Conducted punch listing and inspections for residential units. Coordinated with construction teams and consultants.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="section">
+      <div class="section-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        Platforms & Tools
+      </div>
+      <div class="tools-cluster">
+        <span class="tool-tag highlight">Bluebeam</span>
+        <span class="tool-tag highlight">Excel (Advanced)</span>
+        <span class="tool-tag highlight">AutoCAD</span>
+        <span class="tool-tag highlight">QuickBooks</span>
+        <span class="tool-tag">NetSuite</span>
+        <span class="tool-tag">Trello</span>
+        <span class="tool-tag">Notion</span>
+        <span class="tool-tag">CorelDraw</span>
+        <span class="tool-tag">Canva</span>
+        <span class="tool-tag">MS Office</span>
+        <span class="tool-tag">Google Workspace</span>
+        <span class="tool-tag">Lotus Notes</span>
+      </div>
+    </div>
+
+    <!-- Licenses -->
+    <div class="section">
+      <div class="section-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        Professional Licenses
+      </div>
+      <div class="certs-list">
+        <div class="cert-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          PRC Licensed Electrical Engineer
+        </div>
+        <div class="cert-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          PRC Licensed Real Estate Broker
+        </div>
+        <div class="cert-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          PRC Licensed Real Estate Appraiser
+        </div>
+      </div>
+    </div>
+
+    <!-- Recruiter Note -->
+    <div class="section">
+      <div class="recruiter-note">
+        <div class="recruiter-note-header">
+          <div class="recruiter-note-avatar">JP</div>
+          <div>
+            <div class="recruiter-note-name">Jesus Pacheco</div>
+            <div class="recruiter-note-role">Head of Revenue, Sagan</div>
+          </div>
+        </div>
+        <div class="recruiter-note-text">
+          Mary is the kind of candidate where the resume undersells her. On paper she's an electrical estimator. In practice she's a licensed engineer who's been reviewing, approving, and producing electrical work for years across government, property management, and now US residential construction. The 4 houses per day output is not a claim. That's her current workload for a Texas client. She's already calibrated to US timelines and standards. The property management stint at JLL adds something most estimators don't have: operational discipline, vendor negotiation, budget tracking, compliance work. She's not just estimating. She understands the full lifecycle of a project. Triple licensed in the Philippines. That kind of credential stacking tells you everything about work ethic. Highly recommended.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    Prepared by <strong>Jesus Pacheco</strong> &middot; Head of Revenue, Sagan &middot; April 14, 2026<br>
+    <a href="https://getsagan.com">getsagan.com</a> &middot; jesus.p@getsagan.com
+  </div>
+
+</div>
+
+</body>
+</html>
